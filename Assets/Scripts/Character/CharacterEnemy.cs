@@ -35,7 +35,7 @@ public class CharacterEnemy : Character
 
     private IEnumerator EnemyKilled()
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(0.5f);
         Destroy(gameObject);
     }
 }
