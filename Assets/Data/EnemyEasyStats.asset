@@ -16,7 +16,7 @@ MonoBehaviour:
   Attack: 5
   Defense: 5
   Experience: 0
-  Speed: 2
+  Speed: 2.3
   LifeRate: 0
   AttackRate: 0
   DefenseRate: 0
