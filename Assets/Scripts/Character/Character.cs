@@ -51,6 +51,7 @@ public class Character : MonoBehaviour
                 MessageManager.Instance.SendMessage(new PlayerAttackMessage { Attack = _characterStats.Attack });
                 break;
             case CharacterType.Enemy:
+                _animator.Play("EnemyAttack", 0, 0);
                 MessageManager.Instance.SendMessage(new EnemyAttackMessage { Attack = _characterStats.Attack });
                 break;
             default:
