@@ -2,6 +2,5 @@
 public enum CharacterType
 {
     Player,
-    Enemy,
-    Boss
+    Enemy
 }

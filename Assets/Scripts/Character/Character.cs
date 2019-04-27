@@ -18,8 +18,9 @@ public class Character : MonoBehaviour
     [SerializeField]
     private Text _defenseText = null;
 
-    private CharacterStats _characterStats;
     private float _timer;
+
+    protected CharacterStats _characterStats;
 
     private void Start()
     {
@@ -39,6 +40,21 @@ public class Character : MonoBehaviour
         Attack();
     }
 
+    private void Attack()
+    {
+        switch (_type)
+        {
+            case CharacterType.Player:
+                MessageManager.Instance.SendMessage(new PlayerAttackMessage { Attack = _characterStats.Attack });
+                break;
+            case CharacterType.Enemy:
+                MessageManager.Instance.SendMessage(new EnemyAttackMessage { Attack = _characterStats.Attack });
+                break;
+            default:
+                break;
+        }
+    }
+
     public void IncreaseAttribute(AttributeType type)
     {
         switch(type)
@@ -56,27 +72,15 @@ public class Character : MonoBehaviour
         UpdateCharacterInfo();
     }
 
-    private void UpdateCharacterInfo()
+    protected void UpdateCharacterInfo()
     {
         _lifeText.text = string.Format("HP: {0}", _characterStats.Life);
         _attackText.text = string.Format("AT: {0}", _characterStats.Attack);
         _defenseText.text = string.Format("DF: {0}", _characterStats.Defense);
     }
 
-    private void Attack()
+    protected float GetDamage(float attackReceived)
     {
-        Debug.LogFormat("{0} attacking!", _type);
-        
-        switch(_type)
-        {
-            case CharacterType.Player:
-                break;
-            case CharacterType.Enemy:
-                break;
-            case CharacterType.Boss:
-                break;
-            default:
-                break;
-        }
+        return attackReceived * attackReceived / (attackReceived + _characterStats.Defense);
     }
 }

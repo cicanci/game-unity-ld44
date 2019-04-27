@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9e667b6df419de4cb62615409c95ea0, type: 3}
   m_Name: EnemyEasyStats
   m_EditorClassIdentifier: 
-  Life: 50
-  Attack: 1
-  Defense: 1
+  Life: 100
+  Attack: 5
+  Defense: 5
   Experience: 0
   Speed: 6
   LifeRate: 0

@@ -32,4 +32,9 @@ public class CharacterStats
         Life -= _defaultStats.DefenseCost * _upgradeCost;
         Defense += _defaultStats.DefenseRate * _upgradeRate;
     }
+
+    public void TakeDamage(float damage)
+    {
+        Life -= damage;
+    }
 }

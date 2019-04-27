@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 1207543680980455815}
   - component: {fileID: 3776740323711757885}
   - component: {fileID: 8902975930616322095}
-  - component: {fileID: 5307044538690286459}
+  - component: {fileID: 1568562683267040772}
   m_Layer: 5
-  m_Name: Character
+  m_Name: CharacterPlayer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -78,7 +78,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
---- !u!114 &5307044538690286459
+--- !u!114 &1568562683267040772
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -87,7 +87,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2975997728932124792}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd474d8c2984aae47bc8ea6cb6a2635d, type: 3}
+  m_Script: {fileID: 11500000, guid: 26b410b366220344cbb5dbd2a2a753ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _defaultStats: {fileID: 11400000, guid: 5c5fe627452b46b4092c23069138af05, type: 2}
