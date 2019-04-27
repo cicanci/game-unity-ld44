@@ -87,10 +87,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 2975997728932124792}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf4a2f12c9500bc4d8eb6d0df8f29d30, type: 3}
+  m_Script: {fileID: 11500000, guid: dd474d8c2984aae47bc8ea6cb6a2635d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _defaultStats: {fileID: 11400000, guid: 5c5fe627452b46b4092c23069138af05, type: 2}
+  _type: 0
   _lifeText: {fileID: 3789014509914415345}
   _attackText: {fileID: 8526332121429395259}
   _defenseText: {fileID: 4462773209993114681}

@@ -10,20 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b9e667b6df419de4cb62615409c95ea0, type: 3}
-  m_Name: PlayerDefaultStats
+  m_Name: EnemyEasyStats
   m_EditorClassIdentifier: 
-  Life: 100
+  Life: 50
   Attack: 1
   Defense: 1
   Experience: 0
-  Speed: 3
-  LifeRate: 1
-  AttackRate: 1
-  DefenseRate: 1
-  ExperienceRate: 1
-  SpeedRate: 0.5
+  Speed: 6
+  LifeRate: 0
+  AttackRate: 0
+  DefenseRate: 0
+  ExperienceRate: 0
+  SpeedRate: 0
   LifeCost: 0
-  AttackCost: 1
-  DefenseCost: 2
+  AttackCost: 0
+  DefenseCost: 0
   ExperienceCost: 0
   SpeedCost: 0

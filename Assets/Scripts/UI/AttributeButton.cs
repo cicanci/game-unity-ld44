@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class ButtonBehaviour : MonoBehaviour
+public class AttributeButton : MonoBehaviour
 {
     [SerializeField]
     private AttributeType _attributeType = default;

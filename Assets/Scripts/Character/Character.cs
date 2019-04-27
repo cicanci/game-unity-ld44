@@ -1,11 +1,13 @@
-﻿using System.Text;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class Character : MonoBehaviour
 {
     [SerializeField]
     private DefaultStats _defaultStats = null;
+
+    [SerializeField]
+    private CharacterType _type = default;
 
     [SerializeField]
     private Text _lifeText = null;
@@ -17,6 +19,7 @@ public class Character : MonoBehaviour
     private Text _defenseText = null;
 
     private CharacterStats _characterStats;
+    private float _timer;
 
     private void Start()
     {
@@ -24,9 +27,21 @@ public class Character : MonoBehaviour
         UpdateCharacterInfo();
     }
 
+    private void Update()
+    {
+        if(_timer < _characterStats.Speed)
+        {
+            _timer += Time.deltaTime;
+            return;
+        }
+
+        _timer = 0;
+        Attack();
+    }
+
     public void IncreaseAttribute(AttributeType type)
     {
-        switch (type)
+        switch(type)
         {
             case AttributeType.Attack:
                 _characterStats.IncrementAttack();
@@ -46,5 +61,22 @@ public class Character : MonoBehaviour
         _lifeText.text = string.Format("HP: {0}", _characterStats.Life);
         _attackText.text = string.Format("AT: {0}", _characterStats.Attack);
         _defenseText.text = string.Format("DF: {0}", _characterStats.Defense);
+    }
+
+    private void Attack()
+    {
+        Debug.LogFormat("{0} attacking!", _type);
+        
+        switch(_type)
+        {
+            case CharacterType.Player:
+                break;
+            case CharacterType.Enemy:
+                break;
+            case CharacterType.Boss:
+                break;
+            default:
+                break;
+        }
     }
 }
