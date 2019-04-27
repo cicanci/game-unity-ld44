@@ -17,11 +17,11 @@ MonoBehaviour:
   Defense: 1
   Experience: 0
   Speed: 1
-  LifeRate: 0
-  AttackRate: 0
-  DefenseRate: 0
-  ExperienceRate: 0
-  SpeedRate: 0
+  LifeRate: 1
+  AttackRate: 1
+  DefenseRate: 1
+  ExperienceRate: 1
+  SpeedRate: 1
   LifeCost: 0
   AttackCost: 1
   DefenseCost: 2
