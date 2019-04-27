@@ -21,5 +21,7 @@ public class CharacterPlayer : Character
         Debug.LogFormat("[HP: {0} AT: {1} DF: {2}] {3} took {4} damage", 
             _characterStats.Life, _characterStats.Attack, _characterStats.Defense, name, damage);
 #endif
+
+        _animator.Play("Damage", 0, 0);
     }
 }

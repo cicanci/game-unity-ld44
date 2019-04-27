@@ -20,10 +20,12 @@ public class Character : MonoBehaviour
 
     private float _timer;
 
+    protected Animator _animator;
     protected CharacterStats _characterStats;
 
     private void Start()
     {
+        _animator = GetComponent<Animator>();
         _characterStats = new CharacterStats(_defaultStats);
         UpdateCharacterInfo();
     }
@@ -45,6 +47,7 @@ public class Character : MonoBehaviour
         switch (_type)
         {
             case CharacterType.Player:
+                _animator.Play("Attack", 0, 0);
                 MessageManager.Instance.SendMessage(new PlayerAttackMessage { Attack = _characterStats.Attack });
                 break;
             case CharacterType.Enemy:
