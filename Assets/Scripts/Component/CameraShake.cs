@@ -36,7 +36,7 @@ public class CameraShake : MonoBehaviour
 
     private void ShakeCamera()
     {
-        if (_shakeCameraCoroutine != null)
+        if(_shakeCameraCoroutine != null)
         {
             StopCoroutine(_shakeCameraCoroutine);
         }
@@ -45,7 +45,7 @@ public class CameraShake : MonoBehaviour
 
     private IEnumerator ShakeCameraCoroutine()
     {
-        while (_shakeDuration > 0)
+        while(_shakeDuration > 0)
         {
             yield return null;
             transform.localPosition = _originalPos + Random.insideUnitSphere * _shakeIntensity;
